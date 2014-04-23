@@ -1,0 +1,84 @@
+# //  ModelSim SE 10.0c Jul 21 2011 Linux 3.5.0-47-generic
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {tb.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fifo
+# -- Compiling architecture fifo_a of fifo
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity fifo_generator_v9_3_bhv_as
+# -- Loading entity fifo_generator_v9_3_bhv_ss
+# -- Loading entity fifo_generator_v9_3_conv
+# -- Loading entity fifo_generator_v9_3
+# Model Technology ModelSim SE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity u232c
+# -- Compiling architecture blackbox of u232c
+# Model Technology ModelSim SE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity recv_min
+# -- Compiling architecture recv_min of recv_min
+# Model Technology ModelSim SE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity sender
+# -- Compiling architecture sender of sender
+# Model Technology ModelSim SE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity receiver
+# -- Compiling architecture receiver of receiver
+# Model Technology ModelSim SE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity io
+# -- Compiling architecture io of io
+# Model Technology ModelSim SE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VCOMPONENTS
+# -- Compiling entity top
+# -- Compiling architecture top of top
+# Model Technology ModelSim SE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb
+# -- Compiling architecture behavior of tb
+# vsim -lib work -voptargs=\"+acc\" -t 1ps work.tb 
+# ** Error: Failure to obtain a VHDL simulation license. Unable to checkout any of these license features:  qhsimvh or msimhdlsim
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./tb.fdo PAUSED at line 34

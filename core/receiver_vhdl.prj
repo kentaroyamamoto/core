@@ -1,0 +1,3 @@
+vhdl work "/home/kentaro/core/core/ipcore_dir/fifo.vhd"
+vhdl work "/home/kentaro/core/recv_min.vhd"
+vhdl work "/home/kentaro/core/receiver.vhd"

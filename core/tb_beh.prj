@@ -1,0 +1,8 @@
+vhdl work "ipcore_dir/fifo.vhd"
+vhdl work "../u232c.vhd"
+vhdl work "../recv_min.vhd"
+vhdl work "../sender.vhd"
+vhdl work "../receiver.vhd"
+vhdl work "../io.vhd"
+vhdl work "../top.vhd"
+vhdl work "tb.vhd"
