@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/kentaro/core/core/tb_isim_beh.exe" -prj "/home/kentaro/core/core/tb_beh.prj" "work.tb" 

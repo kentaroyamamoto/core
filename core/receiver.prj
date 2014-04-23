@@ -1,3 +1,0 @@
-vhdl work "ipcore_dir/fifo.vhd"
-vhdl work "../recv_min.vhd"
-vhdl work "../receiver.vhd"

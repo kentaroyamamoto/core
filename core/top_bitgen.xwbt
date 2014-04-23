@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/kentaro/core/core/top.ncd
-OUTFILE=/home/kentaro/core/core/top.bit
-FAMILY=Virtex5
-PART=xc5vlx50t-1ff1136
-WORKINGDIR=/home/kentaro/core/core
-LICENSE=ISE
-USER_INFO=208921728_178739220_208889460_365

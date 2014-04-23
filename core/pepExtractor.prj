@@ -1,7 +1,0 @@
-work	"../io.vhd"
-work	"../receiver.vhd"
-work	"../recv_min.vhd"
-work	"../sender.vhd"
-work	"../top.vhd"
-work	"../u232c.vhd"
-work	"ipcore_dir/fifo.vhd"
