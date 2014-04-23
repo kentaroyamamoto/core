@@ -16,8 +16,8 @@ architecture top of top is
   component io
     port (
     clk : in std_logic;
-    din : in std_logic_vector(31 downto 0);
-    dout : out std_logic_vector(31 downto 0);
+    din : in std_logic_vector(7 downto 0);
+    dout : out std_logic_vector(7 downto 0);
     serial_out : out std_logic;
     serial_in : in std_logic;
     full,empty : out std_logic;
@@ -25,7 +25,7 @@ architecture top of top is
   end component;
   
   signal clk, iclk : std_logic;
-  signal sendbuf,recvbuf : std_logic_vector(31 downto 0);
+  signal sendbuf,recvbuf : std_logic_vector(7 downto 0);
   signal full,empty : std_logic := '0';
   signal wr_en,rd_en : std_logic := '0';
 begin

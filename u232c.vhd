@@ -30,7 +30,11 @@ begin
           if countdown=0 then
             sendbuf<="1"&sendbuf(8 downto 1);
             countdown<=wtime;
-            state<=state+1;
+            if state = "1010" then
+              state <= "0000";
+            else
+              state<=state+1;
+            end if;
           else
             countdown<=countdown-1;
           end if;

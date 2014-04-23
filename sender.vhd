@@ -6,7 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity sender is
   port (
     clk : in std_logic;
-    din : in std_logic_vector(31 downto 0);
+    din : in std_logic_vector(7 downto 0);
     wr_en : in std_logic;
     full : out std_logic;
     serial_out : out std_logic);
@@ -16,10 +16,10 @@ architecture sender of sender is
 component fifo
   PORT (
     clk : IN STD_LOGIC;
-    din : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     wr_en : IN STD_LOGIC;
     rd_en : IN STD_LOGIC;
-    dout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     full : OUT STD_LOGIC;
     empty : OUT STD_LOGIC);
 end component;
@@ -33,13 +33,12 @@ component u232c
          tx   : out STD_LOGIC);
 end component;
 
-signal dout : std_logic_vector(31 downto 0);
+signal dout : std_logic_vector(7 downto 0);
 signal rd_en : std_logic := '0';
 signal data : std_logic_vector(7 downto 0) := (others=>'1');
-signal state : std_logic_vector(2 downto 0) := "000";
 signal empty : std_logic := '1';
 signal go,busy : std_logic := '0';
-signal dbuf : std_logic_vector(31 downto 0);
+
 
 begin
   sendf: fifo port map (
@@ -62,44 +61,14 @@ begin
   main : process(clk)
   begin
     if rising_edge(clk) then
-      case state is
-        when "000" =>
-          if empty = '0' and busy = '0' and go = '0' then
-            go <= '1';
-            state <= state + 1;
-            dbuf <= dout(31 downto 0);
-            data <= dout(7 downto 0);
-            rd_en <= '1';
-          else
-            go <= '0';
-          end if;
-        when "001" =>
-          rd_en <= '0';
-          if busy = '0' and go = '0' then
-            go <= '1';
-            state <= state + 1;
-            data <= dbuf(15 downto 8);
-          else
-            go <= '0';
-          end if;
-        when "010" =>
-          if busy = '0' and go = '0' then
-            go <= '1';
-            state <= state + 1;
-            data <= dbuf(23 downto 16);
-          else
-            go <= '0';
-          end if;
-        when "011" =>
-          if busy = '0' and go = '0' then
-            go <= '1';
-            state <= "000";
-            data <= dbuf(31 downto 24);
-          else
-            go <= '0';
-          end if;
-        when others =>
-        end case;
+      if empty = '0' and busy = '0' and go = '0' then
+        go <= '1';
+        data <= dout;
+        rd_en <= '1';
+      else
+        rd_en <= '0';
+        go <= '0';
       end if;
+    end if;
   end process; 
 end sender;
