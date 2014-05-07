@@ -7,7 +7,7 @@ entity io is
   port (
     clk : in std_logic;
     din : in std_logic_vector(7 downto 0);
-    dout : out std_logic_vector(7 downto 0);
+    dout : out std_logic_vector(31 downto 0);
     serial_out : out std_logic;
     serial_in : in std_logic;
     full,empty : out std_logic;
@@ -27,7 +27,7 @@ end component;
 component receiver
   port (
     clk : in std_logic;
-    dout : out std_logic_vector(7 downto 0);
+    dout : out std_logic_vector(31 downto 0);
     rd_en : in std_logic;
     empty : out std_logic;
     serial_in : in std_logic);

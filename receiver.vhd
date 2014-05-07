@@ -13,7 +13,7 @@ entity receiver is
 end receiver;
 
 architecture receiver of receiver is
-component fifo
+component fifo32
   PORT (
     clk : IN STD_LOGIC;
     din : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -42,7 +42,7 @@ signal dbuf : std_logic_vector(7 downto 0) := x"00";
 signal wr_en : std_logic := '0';
 
 begin
-  recvbuf: fifo port map (
+  recvbuf: fifo32 port map (
     clk => clk,
     din => data,
     wr_en => wr_en,

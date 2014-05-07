@@ -13,7 +13,7 @@ entity sender is
 end sender;
 
 architecture sender of sender is
-component fifo
+component fifo8
   PORT (
     clk : IN STD_LOGIC;
     din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -41,7 +41,7 @@ signal go,busy : std_logic := '0';
 
 
 begin
-  sendf: fifo port map (
+  sendf: fifo8 port map (
     clk => clk,
     din => din,
     wr_en => wr_en,
